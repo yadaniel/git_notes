@@ -58,6 +58,7 @@ git commit --amend -m "change or leave the commit message"
 git checkout <newbranch>
 git cherry-pick <hash>
 git checkout <oldbranch>
+
 ### options to remove changes on oldbranch
 git reset --soft    // modified tracked files are now in the staging area
 git reset           // modified tracked files kept, but not staged
@@ -110,5 +111,4 @@ Fast-forward
  2 files changed, 5 insertions(+), 1 deletion(-)
 
 ***git merge must be called from the corresponding branch***
-
 
