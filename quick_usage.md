@@ -78,3 +78,34 @@ note: from git 1.6 --cached option equals --staged
 ## show difference one a file between last commit and current modified unstaged file
 git diff HEAD <file>
 
+# howto fetch and merge
+git fetch
+remote: Counting objects: 42, done.
+remote: Compressing objects: 100% (42/42), done.
+remote: Total 42 (delta 31), reused 0 (delta 0)
+Entpacke Objekte: 100% (42/42), Fertig.
+Von ssh://git.foobar.net/home/git/repo
+   e13f669a4..5a79bd57d  master        -> origin/master
+   0321d08cb..6789f9f1f  branchBugfix -> origin/branchBugfix
+   2f1a4c6ff..9b0fde4b2  branchFeature  -> origin/branchFeature
+
+
+## try 1
+git merge (incorrect)
+fatal: Kein Remote-Repository für den aktuellen Branch.
+
+## try 2 (incorrect)
+git merge master    # from some other branch will not work
+Bereits aktuell.
+
+## try 3 (correct)
+git checkout master
+git merge
+Aktualisiere a345aebe5..5a79bd57d
+Fast-forward
+ foo/common/xyz.cpp     | 2 +-
+ foo/bar/abc.cpp | 4 ++++
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+
+***git merge must be called from the corresponding branch***
+
