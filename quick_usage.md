@@ -112,3 +112,12 @@ Fast-forward
 
 ***git merge must be called from the corresponding branch***
 
+## delete branch
+git branch --delete <name>  // delete
+git branch -D <name>        // force delete
+
+## clean
+git clean -Xdf  // -Xd files and directories listed in .gitignore
+git clean -xdf  // -xd files and directories which are not tracked
+git clean --dry-run -X  // do not delete, just show
+
