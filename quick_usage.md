@@ -121,3 +121,7 @@ git clean -Xdf  // -Xd files and directories listed in .gitignore
 git clean -xdf  // -xd files and directories which are not tracked
 git clean --dry-run -X  // do not delete, just show
 
+## list all files under control
+git ls-tree -r <branch>
+
+
