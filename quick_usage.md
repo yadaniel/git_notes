@@ -68,10 +68,14 @@ git reset --hard    // modified tracked files deleted, untracked files kept unst
 git revert      # removes the changes from the last commit but adds new commit on top
 
 ## show difference between two commits
-git diff <hash1> <hash2>    # compare two commits
+git diff                    # compare HEAD with current unstaged (tracked) files
 git diff <hash>             # compare HEAD and commit with hash, HEAD is implicit
+git diff <hash1> <hash2>    # compare two commits, additions/deletions from hash1 to hash2 are shown as +/- (time axis)
 git diff HEAD^              # compare commit before HEAD and HEAD
 git diff HEAD^^             # compare commit 2 commits before HAD and HEAD
+git show <hash>             # compare commit with given hash and its predecessor commit
+git show <hash>^            # compare predecessor commit of given hash and its predecitor commit
+git show <hash>^^           # compare pre(pre(commit with given hash)) and  pre(pre(pre(commit)))
 
 ## show difference between last commit ...
 git diff            # and current changes that are not staged
@@ -123,5 +127,8 @@ git clean --dry-run -X  // do not delete, just show
 
 ## list all files under control
 git ls-tree -r <branch>
+
+## add ignored file
+git add -f <file>
 
 
