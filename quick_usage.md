@@ -131,4 +131,7 @@ git ls-tree -r <branch>
 ## add ignored file
 git add -f <file>
 
+## add all traced files
+git add --update
+
 
