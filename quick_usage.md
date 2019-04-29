@@ -44,6 +44,10 @@ git log --stat
 
 ## revert modified but not staged files back to original state
 git checkout <file>
+git checkout -- <file>
+
+## revert all modified but not staged files back to original state
+git checkout -- .
 
 ## print the list of all tracked files
 git --ls-tree --full-tree -r --name-only HEAD
