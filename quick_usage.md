@@ -77,6 +77,7 @@ git diff <hash>             # compare HEAD and commit with hash, HEAD is implici
 git diff <hash1> <hash2>    # compare two commits, additions/deletions from hash1 to hash2 are shown as +/- (time axis)
 git diff HEAD^              # compare commit before HEAD and HEAD
 git diff HEAD^^             # compare commit 2 commits before HAD and HEAD
+git diff <hash> <samehash>^ # compare commit with given hash and its predecessor commit
 git show <hash>             # compare commit with given hash and its predecessor commit
 git show <hash>^            # compare predecessor commit of given hash and its predecitor commit
 git show <hash>^^           # compare pre(pre(commit with given hash)) and  pre(pre(pre(commit)))
