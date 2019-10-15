@@ -151,5 +151,12 @@ git add -f <file>
   
 ## add all traced files  
 git add --update  
+
+## rename branch local and then on remote repository
+git branch <old_name> --move <new_name>
+git push origin --delete <old_name>
+git push origin <new_name>
+
+
   
   
