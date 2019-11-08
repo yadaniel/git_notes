@@ -1,0 +1,16 @@
+[[ -f /etc/bash_completion ]] && . /etc/bash_completion
+
+alias ls='ls --color'
+alias watchc='watch --color'
+
+eval $(dircolors.exe -b)
+export $LS_COLORS
+
+export PATH=${PATH}:/c/GNU_Tools_ARM_Embedded/7_2018/bin
+export PATH=${PATH}:/c/bin
+
+# curl -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > ~/.bashrc_git
+source ~/.bash_git
+# \\\\u => escape otherwise interpreted by printf as unicode character
+export PS1=$(printf "\[\e]0;\w\a\]\n\[\e[32m\]\\\\u@\h \[\e[35m\]$MSYSTEM\[\e[0m\] \[\e[33m\]\w\[\e[0m\] (%s)  \n\$ " '$(__git_ps1 "%s")')
+
