@@ -86,7 +86,8 @@ git show <hash>^            # compare predecessor commit of given hash and its p
 git show <hash>^^           # compare pre(pre(commit with given hash)) and  pre(pre(pre(commit)))  
 
 ## show difference between file on different branches
-git diff <branch1> <branch2> -- <file>
+git diff <branch1> <branch2> -- <file>      # temporary files are opened
+git diff <hash> -- <file>                   # temporary file from <hash> opened, file on current branch opened => vimdiff diffget diffput
   
 ## show difference between last commit ...  
 git diff            # and current changes that are not staged    
