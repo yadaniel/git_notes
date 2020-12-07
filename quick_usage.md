@@ -41,6 +41,9 @@ git stash drop  # take it from stack
   
 ## show what files were changed  
 git log --stat  
+
+## show commits for the branch
+git log <branch>
   
 ## revert modified but not staged files back to original state  
 git checkout <file>  
@@ -71,7 +74,7 @@ git reset --hard    // modified tracked files deleted, untracked files kept unst
 ## undo changes done by the last commit  
 git revert      # removes the changes from the last commit but adds new commit on top  
   
-## show difference between two commits  
+## show difference between two commits on the same branch
 git diff                    # compare HEAD with current unstaged (tracked) files  
 git diff <hash>             # compare HEAD and commit with hash, HEAD is implicit  
 git diff <hash1> <hash2>    # compare two commits, additions/deletions from hash1 to hash2 are shown as +/- (time axis)  
@@ -81,6 +84,9 @@ git diff <hash> <samehash>^ # compare commit with given hash and its predecessor
 git show <hash>             # compare commit with given hash and its predecessor commit  
 git show <hash>^            # compare predecessor commit of given hash and its predecitor commit  
 git show <hash>^^           # compare pre(pre(commit with given hash)) and  pre(pre(pre(commit)))  
+
+## show difference between file on different branches
+git diff <branch1> <branch2> -- <file>
   
 ## show difference between last commit ...  
 git diff            # and current changes that are not staged    
