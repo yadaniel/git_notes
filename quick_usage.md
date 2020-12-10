@@ -164,6 +164,8 @@ git branch <old_name> --move <new_name>
 git push origin --delete <old_name>
 git push origin <new_name>
 
+## copy one tracked file from other branch
+git checkout <branch> <file>
 
-  
+
   
