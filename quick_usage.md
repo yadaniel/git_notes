@@ -167,5 +167,8 @@ git push origin <new_name>
 ## copy one tracked file from other branch
 git checkout <branch> <file>
 
+## find out the url of cloned remote repository when in working in local repository
+git remote get-url origin
+
 
   
