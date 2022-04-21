@@ -158,17 +158,23 @@ git add -f <file>
   
 ## add all traced files  
 git add --update  
-
-## rename branch local and then on remote repository
-git branch <old_name> --move <new_name>
-git push origin --delete <old_name>
-git push origin <new_name>
-
-## copy one tracked file from other branch
-git checkout <branch> <file>
-
-## find out the url of cloned remote repository when in working in local repository
-git remote get-url origin
-
-
+ 
+## rename branch local and then on remote repository 
+git branch <old_name> --move <new_name> 
+git push origin --delete <old_name> 
+git push origin <new_name> 
+ 
+## copy one tracked file from other branch 
+git checkout <branch> <file> 
+ 
+## find out the url of cloned remote repository when in working in local repository 
+git remote get-url origin 
+ 
+# alias set, unset and list 
+git config --global alias.st status     //  ~/.gitconfig 
+git config --local alias.st status      // .git/config of the current repository 
+git config --system alias.st status     // /etc/gitconfig 
+git config --global --unset alias.st status     //  ~/.gitconfig  
+git config --global --list  
+git config --list  
   
