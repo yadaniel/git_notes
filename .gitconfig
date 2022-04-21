@@ -1,0 +1,28 @@
+[user]
+    name = user_name
+    email = user@email
+[alias]
+    com = commit
+    st = status
+    co = checkout
+    br = branch
+    l = log --oneline
+
+[diff]
+    # when tool is commented out
+    # git difftool
+    # will show message that diff.tool is not setup
+    tool = vimdiff
+
+[difftool]
+    # when diff.tool is set and prompt is commented out
+    # git difftool
+    # will ask [Y/n] to use the setup tool
+    prompt = false
+
+[difftool "vimdiff"]
+    # cmd = vimdiff "$1" "$2" -c "wincmd w" -c "wincmd L"
+
+[core]
+    editor = /usr/bin/vim
+
