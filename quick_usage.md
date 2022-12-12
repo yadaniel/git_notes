@@ -17,6 +17,11 @@ git reset HEAD --
   
 ## correct last commit message  
 git commit --amend  
+ 
+## correct last commit, add file 
+git add somefile 
+git state 
+git commit --amend  
   
 ## find out all commits from $user  
 git log --author=$user  
@@ -177,4 +182,15 @@ git config --system alias.st status     // /etc/gitconfig
 git config --global --unset alias.st status     //  ~/.gitconfig  
 git config --global --list  
 git config --list  
+
+# revert 
+git commit -m "some commit usefull 1" 
+git commit -m "some commit 2 with error" 
+git commit -m "some commit usefull 3" 
+git revert <hash-of-commit2> 
+git revert --continue 
+git revert --abort 
+git revert --skip 
+if changes are in same file, manual resolution is needed  
+
   
