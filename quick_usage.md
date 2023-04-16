@@ -146,9 +146,12 @@ Fast-forward
   
 ***git merge must be called from the corresponding branch***  
   
-## delete branch  
+## delete branch on local repository 
 git branch --delete <name>  // delete  
 git branch -D <name>        // force delete  
+  
+## delete branch on remote repository  
+git push origin --delete <name>  // if exists the local branch is kept  
   
 ## clean  
 git clean -Xdf  // -Xd files and directories listed in .gitignore  
