@@ -267,3 +267,42 @@ git log -p -- `<file>`{=html}
 # see diff between current branch and stashed file
 
 git diff stash `<file>`{=html}
+
+# usually the local repositry is cloned from bare repository, then bare repository is tracked by origin
+git remote show origin
+## usually only master/main branch is created and added for fetch and push
+## additional local branches needs to be setup for push as follows
+git branch -b somebranch
+git add somefiles
+git commit -m "some files added to local branch somebranch"
+git push --set-upstream origin
+
+## add remote repository to local repository
+git remote add other <url>
+## now branches from other repositry can be fetched from it
+## additional local branches now can be setup for push either to origin, other or both
+git remote show origin
+git remote show other
+## will show the mapping of local branches to remote repository branches
+
+## when repository was not cloned, but instead created with ...
+mkdir repo
+cd repo
+git init
+## then similary remote repositories can be added to it
+git remote add localref1 <repo1_url> \
+git remote add localref2 <repo2_url>
+## now the branches from them can be fetched with ...
+git fetch localref1\
+git fetch localref2
+## list the branches
+git branch --all
+## as of now they all will be remote branches
+## if the name of the branch is unique on remote then it can be checkout
+git checkout <uniq-branch-name>
+## if the name of the branch is same on both remotes then checkout will complain and the mapping can be done with ...
+git branch local-branch-name <localref1>/<non-unique-branch>
+
+
+
+
